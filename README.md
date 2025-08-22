@@ -30,3 +30,17 @@
    git clone https://github.com/tuusuario/mll-reserva.git
    cd mll-reserva
    ```
+2. **Intalar entorno virtual**
+   ```shell
+   virtualenv env
+   ```
+2. **Intalar librerias**
+   ```shell
+   pip install requirement.txt
+   ```
+
+
+## 🧪 Ejecución
+   ```shell
+   python src/main.py
+   ```
