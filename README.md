@@ -36,11 +36,65 @@
    ```
 2. **Intalar librerias**
    ```shell
-   pip install requirement.txt
+   pip install -r requirements.txt
    ```
 
 
-## 🧪 Ejecución
+## ▶️ Uso
+Ejecuta el chatbot desde la raíz del proyecto:
    ```shell
    python src/main.py
    ```
+
+   Opciones disponibles:
+   1. Realizar una pregunta legal.
+
+   2. Ver historial de preguntas y respuestas.
+
+      Al final de cada respuesta, puedes optar por escucharla en voz alta.
+
+## 📁 Estructura del proyecto
+
+MLL RESERVA/
+
+├── data/                  # Documentos legales en PDF (ej. DL-2306_12-SEP-1978.pdf)
+
+├── modelo/                # Archivo GGUF del modelo Mistral (ej. mistral.gguf)
+
+├── outputs/
+
+    └── indices/           # Índices FAISS y archivos auxiliares
+
+        ├── faiss.index
+
+        ├── fragmentos.pkl
+
+        └── respuestas.txt
+
+├── src/                   # Código fuente del chatbot
+
+    ├── main.py            # Script principal del sistema
+
+    ├── voz.py             # Módulo de voz (Text-to-Speech)
+
+    ├── corrector.py       # Corrección de texto generado
+
+    ├── embeddings.py      # Generación de embeddings
+
+    ├── historial.py       # Manejo del historial de preguntas/respuestas
+
+    ├── llama_model.py     # Carga y ejecución del modelo Mistral
+
+    ├── logger.py          # Registro de eventos
+
+    ├── pdf_reader.py      # Lectura de documentos PDF
+
+    ├── preprocess.py      # División y limpieza de texto legal
+
+    ├── search.py          # Búsqueda semántica en fragmentos
+
+    └── requirements.txt   # Lista de dependencias
+
+├── README.md              # Documentación del proyecto
+
+├── env/                   # Entorno virtual de Python
