@@ -58,23 +58,43 @@ Ejecuta el chatbot desde la raíz del proyecto:
 MLL RESERVA/
 
 ├── data/                  # Documentos legales en PDF (ej. DL-2306_12-SEP-1978.pdf)
+
 ├── modelo/                # Archivo GGUF del modelo Mistral (ej. mistral.gguf)
+
 ├── outputs/
+
     └── indices/           # Índices FAISS y archivos auxiliares
+
         ├── faiss.index
+
         ├── fragmentos.pkl
+
         └── respuestas.txt
+
 ├── src/                   # Código fuente del chatbot
+
     ├── main.py            # Script principal del sistema
+
     ├── voz.py             # Módulo de voz (Text-to-Speech)
+
     ├── corrector.py       # Corrección de texto generado
+
     ├── embeddings.py      # Generación de embeddings
+
     ├── historial.py       # Manejo del historial de preguntas/respuestas
+
     ├── llama_model.py     # Carga y ejecución del modelo Mistral
+
     ├── logger.py          # Registro de eventos
+
     ├── pdf_reader.py      # Lectura de documentos PDF
+
     ├── preprocess.py      # División y limpieza de texto legal
+
     ├── search.py          # Búsqueda semántica en fragmentos
-    └── requirements.txt   # Lista de dependencias
+
+ │   └── requirements.txt   # Lista de dependencias
+
 ├── README.md              # Documentación del proyecto
+
 ├── env/                   # Entorno virtual de Python
